@@ -4,11 +4,14 @@ Project 1 - A Number Guessing Game
 --------------------------------
 """
 
-# Imported random and statistics modules
+# IMPORTS
 import random
 import statistics
 
-# Defined a function and updating. This will be function that starts and runs the game.
+# LISTS
+guesses_list = [] # 4. To store a list guesses per game.
+
+# FUNCTION
 def start_game():
     # 1. Welcome message
     print("WELCOME! I hope you enjoy the game!")
@@ -17,15 +20,27 @@ def start_game():
     random_number = random.randrange(1,10) 
     print(random_number) #DELETE - for testing purposes
     
-    # 3. Set guess = 0 for initialization of the variable.
+    # 3. Set guess = 0 for initialization of the variable. The variable will be used to store the player's guess.
     # 3. Used a while loop to continuously prompt the play for a guess until the guess equals the random_number
+    # 4. Set number_of_guesses = 0 for initialization of the variable. The variable will be used to store number of guess attempts.
+    # 4. number_of_guesses updates in the while-loop with each guess.
     guess = 0
-    while guess != random_number:
-        guess = int(input("Pick a number between 1 & 10: "))
-        if guess < random_number:
-            print("It's higher.")
-        elif guess > random_number:
-            print("It's lower.")
-    print("GREAT GUESS!!!")
+    number_of_guesses = 0
     
+    while guess != random_number: # 3. While-loop initialization
+        guess = int(input("Pick a number between 1 & 10: ")) # 3. Player's guess
+        number_of_guesses += 1 # 4. Tracking number of guesses
+        
+        if guess < random_number: # 3.a
+            print("It's higher.")
+        elif guess > random_number: # 3.b
+            print("It's lower.")
+
+    
+    print("GOT IT!!!") # 4. Informs user they got it
+    guesses_list.append(number_of_guesses) #4. Appends list with number of guesses per the game.
+    
+    print(f"Number of guesses: {number_of_guesses}")
+    print(guesses_list)
+             
 start_game()
