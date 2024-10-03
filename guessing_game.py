@@ -17,4 +17,15 @@ def start_game():
     random_number = random.randrange(1,10) 
     print(random_number) #DELETE - for testing purposes
     
+    # 3. Set guess = 0 for initialization of the variable.
+    # 3. Used a while loop to continuously prompt the play for a guess until the guess equals the random_number
+    guess = 0
+    while guess != random_number:
+        guess = int(input("Pick a number between 1 & 10: "))
+        if guess < random_number:
+            print("It's higher.")
+        elif guess > random_number:
+            print("It's lower.")
+    print("GREAT GUESS!!!")
+    
 start_game()
