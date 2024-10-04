@@ -37,10 +37,15 @@ def start_game():
             print("It's lower.")
 
     
-    print("GOT IT!!!") # 4. Informs user they got it
-    guesses_list.append(number_of_guesses) #4. Appends list with number of guesses per the game.
-    
-    print(f"Number of guesses: {number_of_guesses}")
-    print(guesses_list)
+        print("GOT IT!!!") # 4. Informs user they got it
+        guesses_list.append(number_of_guesses) #4. Appends list with number of guesses per the game.
+        guesses_list.sort()
+        
+        # 5. Display data from the game(s). Including: mean, median and mode
+        print(guesses_list) #DELETE - For test puposes to see the list
+        print(f"Number of guesses: {number_of_guesses}") #5.a
+        print(f"Mean of guesses: {statistics.mean(guesses_list)}") #5.b
+        print(f"Median of guesses: {statistics.median(guesses_list)}") #5.c
+        print(f"Mode of guesses: {statistics.mode(guesses_list)}") #5.d
              
 start_game()
