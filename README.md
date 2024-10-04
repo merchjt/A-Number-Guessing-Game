@@ -1,5 +1,18 @@
 # A Number Guessing Game
 
+The game welcomes and prompts the user to guess an integer from 1 to 10. 
+The game will select a random integer using the random.randrange() function.
+The user will be allowed to make as many guesses as possible until the the correct integer is guessed.
+The game will provide statistics for the game and ask if the user would like to continue.
+The user can continue as many times as they would like.
+
+Programming requirements are listed below.
+
+NOTE: I would like my project to be rejected if it does not meet all Exceeds Expectations Requirements
+
+
+
+===== PROGRAMMING REQUIREMENTS =====
 Import the random and statistics modules.
 
 Create the start_game function.
